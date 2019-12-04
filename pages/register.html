@@ -1,0 +1,44 @@
+﻿<!--https://mdbootstrap.com/docs/jquery/forms/basic/?#!-->
+<div class="row">
+    <div class="col-md-8 col-lg-6 mx-auto mt-md-5 mt-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <!-- Default form login -->
+                <form name="frmRegister" class="text-center border border-light p-5" action="#!" ng-submit="register($event)">
+
+                    <p class="h4 mb-4">Kayıt Ol</p>
+
+                    <div class="alert alert-danger text-left" ng-show="hasErrors()">
+                        <ul class="m-0">
+                            <li ng-repeat="error in errors">{{ error }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert alert-success text-left" ng-show="successMessage">
+                        <ul class="m-0">
+                            <li>{{ successMessage }}</li>
+                        </ul>
+                    </div>
+                    <!-- Email -->
+                    <input ng-model="user.Email" type="email" id="email" name="email" class="form-control mb-4" placeholder="E-Posta" required>
+
+                    <!-- Password -->
+                    <input ng-model="user.Password" type="password" id="password" name="password" class="form-control mb-4" placeholder="Parola" required>
+
+                    <!-- Confirm Password -->
+                    <input ng-model="user.ConfirmPassword" type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control mb-4" placeholder="Parola (tekrar)" required>
+
+                    <!-- Register button -->
+                    <button class="btn btn-info btn-block my-4" type="submit">Kayıt Ol</button>
+
+                    <!-- Login -->
+                    <p>
+                        Zaten üye misiniz?
+                        <a href="#!login">Giriş Yap</a>
+                    </p>
+                </form>
+                <!-- Default form login -->
+            </div>
+        </div>
+    </div>
+</div>

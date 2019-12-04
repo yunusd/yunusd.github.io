@@ -1,0 +1,55 @@
+﻿<!--https://mdbootstrap.com/docs/jquery/forms/basic/?#!-->
+<div class="row">
+    <div class="col-md-8 col-lg-6 mx-auto mt-md-5 mt-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <!-- Default form login -->
+                <form name="frmLogin" class="text-center border border-light p-5" action="#!" ng-submit="login($event)">
+
+                    <p class="h4 mb-4">Giriş Yap</p>
+
+                    <div class="alert alert-danger text-left" ng-show="hasErrors()">
+                        {{ error }}
+                    </div>
+                    <div class="alert alert-success text-left" ng-show="successMessage">
+                        {{ successMessage }}
+                    </div>
+                    <!-- Email -->
+                    <input ng-model="user.username" type="email" id="email" name="email" class="form-control mb-4" placeholder="E-Posta">
+
+                    <!-- Password -->
+                    <input ng-model="user.password" type="password" id="password" name="password" class="form-control mb-4" placeholder="Parola">
+
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <!-- Remember me -->
+                            <div class="custom-control custom-checkbox">
+                                <input ng-model="isRememberMe" type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                <label class="custom-control-label" for="defaultLoginFormRemember">Beni hatırla</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Forgot password -->
+                            <a href="">Parolanı mı unuttun?</a>
+                        </div>
+                    </div>
+
+                    <!-- Sign in button -->
+                    <button class="btn btn-info btn-block my-4" type="submit">Giriş Yap</button>
+
+                    <!-- Register -->
+                    <p>
+                        Henüz üye değil misin?
+                        <a href="#!register">Kayıt Ol</a>
+                    </p>
+
+                </form>
+                <!-- Default form login -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
